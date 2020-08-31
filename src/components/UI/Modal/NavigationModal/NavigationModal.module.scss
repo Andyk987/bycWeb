@@ -1,0 +1,42 @@
+.NavigationModal {
+    position: absolute;
+    width: 350px;
+    height: 50px;
+    right: -290px;
+    background: white;
+    li {
+        width: 175px;
+        height: 50px;
+        position: relative;
+        display: inline-block;
+        .LiMenu {
+            display: inline;
+            p {
+                margin-top: 15px;
+                font-size: 20px;
+                display: inline-block;
+                font-family: 'Noto Sans KR', sans-serif;
+                color: #4B4B4B;
+            }
+        }
+         .LiMenu:hover {
+             p {
+                 color: #398A97;
+             }
+        }
+    }
+   
+}
+
+.Open {
+    transition: all 0.4s cubic-bezier(.645, .045, .355, 1);
+    transform: translatey(3px);
+    opacity: 1;
+    pointer-events: all;
+    z-index: 500;
+}
+
+.Close {
+    opacity: 0;
+    pointer-events: none;
+}

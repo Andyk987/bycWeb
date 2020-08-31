@@ -1,0 +1,16 @@
+.JoinInput {
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.JoinInput:nth-child(1) {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.JoinSubmit {
+    margin: 0 auto;
+    cursor: pointer;
+}
+.JoinSubmit:hover {
+    background-color: black;
+    color: white;
+}

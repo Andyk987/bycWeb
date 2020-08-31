@@ -111,7 +111,10 @@ module.exports = function(webpackEnv) {
         {
             loader: require.resolve("sass-loader"),
             options: {
-                sourceMap: true
+                sourceMap: true,
+                sassOptions: {
+                    modules: true
+                }
             }
         },
     ].filter(Boolean);
