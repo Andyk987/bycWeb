@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import styles from './assets/scss/reset.module.scss';
+import './assets/scss/reset.module.scss';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import ApolloClient from 'apollo-boost';

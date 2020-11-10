@@ -3,14 +3,26 @@ type User {
     name: String!
     email: String!
     password: String!
+    avatarUrl: String
     isLogin: Boolean
+    isGoogleLogin: Boolean
+    isFacebookLogin: Boolean
+}
+
+type IntroducePage {
+    isRendering: Boolean!
 }
 
 type Query {
     users: [User]!
     user(email: String!): User
+    intro: IntroducePage
 }
 
 type Mutation {
-    createUser(name: String!, email: String!, password: String!): User!
+    login(email: String!, password: String!): User
+    logout(email: String!): User
+    checkGoogleLogout(email: String!): User
+    checkFacebookLogout(email: String!): User
+    checkIntro(state: Boolean!): IntroducePage
 }

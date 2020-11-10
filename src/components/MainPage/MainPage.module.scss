@@ -1,0 +1,17 @@
+.MainPage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 5rem;
+	.Scroll_Section:nth-child(1) {
+		height: 90vh;
+	}
+}
+
+button {
+	position: fixed;
+	top: 5rem;
+}
+button:nth-child(1) {
+	left: 5rem;
+}

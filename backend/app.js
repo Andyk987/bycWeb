@@ -20,9 +20,11 @@ const app = express();
 
 const CokieStore = MongoStore(session);
 
+
+
 app.use(
     cors({
-        origin: "https://webproject-gxrpg.run.goorm.io",
+        origin: ["https://webproject-gxrpg.run.goorm.io", "http://webproject-gxrpg.run.goorm.io"],
         credentials: true
     })
 );

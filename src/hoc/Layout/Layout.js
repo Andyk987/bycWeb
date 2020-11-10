@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Layout.module.scss';
 
 import Auxiliary from '../Auxiliary/Auxiliary';
-import Header from '../../components/Navigation/NavigationItems/NavigationItems';
-import Footer from '../../components/Navigation/Footer/Footer';
+import NavigationItems from '../../components/Navigation/NavigationItems/NavigationItems';
 
 const Layout = (props) => {
     return (
         <Auxiliary>
-            <Header/>
+            <NavigationItems loginClick={props.loginClick}/>
             <main className={styles.Main}>{props.children}</main>
-            <Footer></Footer>
+            
         </Auxiliary>
     );
 };

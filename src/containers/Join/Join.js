@@ -1,21 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Join.module.scss';
-import { withRouter, Redirect } from 'react-router-dom';
-import { gql } from 'apollo-boost';
-import { useMutation } from '@apollo/react-hooks';
+import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 import Input from '../../components/UI/Input/Input';
-
-const GET_DATAS = gql`
-    mutation createUser($name: String! $email: String! $password: String!) {
-        createUser(name: $name email: $email password: $password) {
-            name
-            email
-            password
-        }
-    }  
-`
 
 const Join = (props) => {
     const [JoinValue, setJoinValue] = useState({
@@ -27,7 +15,7 @@ const Join = (props) => {
         },
         email: {
             type: 'email',
-            placeholder: 'id',
+            placeholder: 'email',
             value: '',
             name: 'email' 
         },
@@ -71,9 +59,26 @@ const Join = (props) => {
         setJoinValue(updateInput);
     };
     
+    const submitHandler = (e) => {
+        e.preventDefault();
+        axios({
+            method: 'post',
+            url: 'https://graphql-api.run.goorm.io/join',
+            data: {
+                name: JoinValue.name.value,
+                email: JoinValue.email.value,
+                password: JoinValue.password.value,
+                passwordCheck: JoinValue.passwordCheck.value
+            }
+        })
+        .then(res => {
+            window.location.replace('/login');
+        })
+    }
+    
     return (
         <div>
-            <form action="https://graphql-api.run.goorm.io/join" method="post">
+            <form onSubmit={e => submitHandler(e)}>
                 {joinForm}
                 <input type="submit" value="submit" className={styles.JoinSubmit} />
             </form>

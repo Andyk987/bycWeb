@@ -1,18 +1,120 @@
-.LoginInput {
+.Login {
+    position: absolute;
     margin: 0 auto;
-}
-.LoginInput:nth-child(1) {
-    margin-top: 100px;
-    margin-bottom: 10px;
-}
-.LoginSubmit:hover {
-    background-color: black;
-    color: white;
-}
-.LoginSubmit {
-    margin: 0 auto;
-    margin-top: 10px;
-    cursor: pointer;
-    width: 150px;
+    top: 0;
+    width: 50rem;
+    height: 31.25rem;
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 12px 0px;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.1s ease;
+    .Logo {
+        display: inline-block;
+        width: 30%;
+        height: 100%;
+        border-right: 1px solid black;
+    }
+    .Login_Form {
+        position: absolute;
+        display: inline-block;
+        width: 70%;
+        height: 100%;
+        .Close_Button {
+            position: absolute;
+            display: inline-block;
+            font-size: 2.5rem;
+            right: 1rem;
+            top: 0.5rem;
+            color: #7d7d7d;
+            cursor: pointer;
+        }
+        .Close_Button:after {
+            display: inline-block;
+            content: "\00d7";
+        }
+        .Form {
+            margin-top: 1.125rem;
+            margin-left: 5.25rem;
+            width: 70%;
+            height: 71%;
+            background-color: white;
+            h1 {
+                display: inline-block;
+                text-align: center;
+                font-family: "Barlow";
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+                margin-left: 9.8rem;
+            }
+            .LoginName {
+                
+                font-style: normal;
+                font-weight: normal;
+                line-height: 22px;
+                color: black;
+                margin-left: 2.8rem;
+            }
+            .LoginInput {
+                font-size: 1rem;
+                margin: 0 auto;
+                border: none;
+                border-bottom: 1px solid #dadada;
+                transition: all 0.3s ease;
+            }
+            .LoginInput:nth-child(2) {
+                margin-bottom: 1rem;
+            }
+            .LoginInput:focus {
+                border-bottom-color: black;
+            }
+            .Forgot {
+                    display: inline-block;
+                    margin-top: 0.3rem;
+                    margin-left: 14.5rem;
+                    margin-bottom: 3rem;
+            }
+            .LoginSubmit {
+                font-size: 1.4rem;
+                margin: 0 auto;
+                height: 2.2rem;
+                line-height: 2.1rem;
+                background-color: #50458E;
+                border: none;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+            .LoginSubmit:hover {
+                filter: brightness(0.7);
+            }
+        }
+    }
+    .Social_Login {
+        position: relative;
+        p {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .GoogleLogin {
+            position: absolute;
+            left: 12rem;
+            outline: 0 !important;
+            border: none !important;
+            background-color: white;
+            cursor: pointer;
+        }
+    }
+}
+.Closed {
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+}
+.Open {
+    z-index: 100;
+    opacity: 1;
+    pointer-events: all;
 }

@@ -10,6 +10,7 @@ const Input = (props) => {
             name={props.elementName}
             onChange={props.elementOnChange}
             onSubmit={props.elementOnSubmit}
+            onClick={props.elementOnClick}
             className={props.elementClassName}
             ref={props.elementRef}
             />

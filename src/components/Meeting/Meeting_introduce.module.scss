@@ -1,0 +1,55 @@
+.image {
+    width: 100%;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+.Meeting {
+    width: 100%;
+    .BackNavImage {
+        position: relative;
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 463px;
+        height: 307px;
+        transition: all 0.4s ease;
+        overflow: hidden;
+        border-radius: 20px;
+        .NavImage {
+            border-radius: 20px;
+        }
+        p {
+            position: absolute;
+            top: 100px;
+            left: 185px;
+            opacity: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 3.2em;
+            color: #4699b9;
+        }
+    }
+    .BackNavImage:nth-child(1) {
+        margin-left: 11px;
+    }
+    .EmptyImage {
+        display: inline-block;
+        width: 463px;
+        height: 307px;
+        border-radius: 20px;
+        background-color: silver;
+        margin-top: 10px;
+        margin-left: 10px; 
+    }
+    .BackNavImage:hover {
+        img {
+            filter: brightness(0.3);
+            transform: scale(1.1);
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        p {
+            transition: all 0.4s ease;
+            opacity: 1;
+        }
+    }
+}

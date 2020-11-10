@@ -1,0 +1,76 @@
+.NavigationItem {
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    .Wrapped {
+        position: relative;
+        width: 77vw;
+        height: 5rem;
+        margin: 0 auto;
+        background-color: white;
+        .Logo {
+            position: absolute;
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-family: Koulen;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 3rem;
+            color: #5e52a5;
+            bottom: 0.4rem;
+        }
+        .NavItem {
+            position: absolute;
+            right: 5rem;
+            bottom: 1rem;
+            display: inline-block;
+            .Items {
+                display: inline-block;
+                width: 5.02rem;
+                .Item {
+                    font-family: 'Noto Sans KR', sans-serif;
+                    font-size: 1.3rem;
+                    color: #424242;
+                    transition: color 0.3s ease;
+                }
+            }
+            .Login {
+                display: inline-block;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 1.3rem;
+                color: #424242;
+                cursor: pointer;
+            }
+            .Line {
+                position: absolute;
+                margin-top: 0.14rem;
+                height: 0.2rem;
+                width: 2.5rem;
+                background: #f23b26;
+                transition: all 0.3s ease;
+                opacity: 0;
+            }
+            li:nth-child(1):hover ~ .Line {
+                opacity: 1;
+            }
+            li:nth-child(2):hover ~ .Line {
+                opacity: 1;
+                transform: translatex(5rem);
+            }
+            li:nth-child(3):hover ~ .Line {
+                opacity: 1;
+                transform: translatex(10.2rem);
+            }
+            li:nth-child(4):hover ~ .Line {
+                opacity: 1;
+                transform: translatex(15.2rem);
+            }
+        }
+    }
+}
+.Sticky {
+    box-shadow: 0 0px 5px -1px rgba(0, 0, 0, 0.61);
+}

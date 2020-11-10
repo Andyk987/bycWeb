@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'BBTreeGB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.Video {
+	position: relative;
+	width: 77vw;
+	margin: 0 auto;
+	.Video_Wrapped {
+		text-align: center;
+		video {
+			width: 77vw;
+			opacity: 0.2;
+			z-index: -1;
+		}
+	}
+	.MainPage_OnVideo {
+		position: absolute;
+		width: 77%;
+		top: 31%;
+		.OnVideoText {
+			.Design {
+				position: absolute;
+				top: 0.9rem;
+				left: 2.3rem;
+				width: 27rem;
+				height: 1.4rem;
+				background: linear-gradient(90deg, #41339026 30%, #791f1f26 100%);
+				border-top-right-radius: 10px;
+			}
+			.Text {
+				font-family: 'Ubuntu', sans-serif;
+				font-size: 3rem;
+				color: #413390;
+				margin-left: 2rem;
+				margin-bottom: 1rem;
+			}
+		}
+		.JoinButton {
+			display: inline-block;
+			margin-top: 5rem;
+			position: relative;
+			height: 3rem;
+			.Button {
+				position: absolute;
+				margin-left: 2rem;
+				width: 12rem;
+				height: 3rem;
+				outline: none;
+				background: none;
+				border: 3px solid #2f1e92;
+				border-radius: 5px;
+				font-size: 1.5rem;
+				.Join {
+					display: inline-block;
+					margin-top: 0.5rem;
+					margin-left: 4rem;
+					font-size: 2rem;
+					color: #2f1e92;
+					transition: all 0.4s ease;
+				}
+			}
+			.Arrow {
+				position: absolute;
+				bottom: 0.9rem;
+				left: 9rem;
+				width: 15px;
+				height: 15px;
+				border-top: 2px solid #2f1e92;
+				border-left: 2px solid #2f1e92;
+				box-sizing: border-box;
+				transform: rotate(135deg);
+				opacity: 0;
+				pointer-events: none;
+				transition: all 0.3s ease;
+			}
+			.Arrow::after {
+				content: "";
+				display: block;
+				width: 2px;
+				height: 30px;
+				background-color: #2f1e92;
+				transform: rotate(-45deg) translate(10px, 4px);
+			}
+		}
+		.JoinButton:hover {
+			.Button {
+				.Join {
+					transition: all 0.4s ease;
+					margin-left: 3rem;
+				}
+			}
+			.Arrow {
+				left: 10rem;
+				opacity: 1;
+				pointer-events: all;
+				transition: all 0.4s ease;
+			}
+		}
+	}
+	svg {
+		position: absolute;
+		bottom: 3rem;
+	}
+	.Arrow2 {
+		position: absolute;
+		bottom: 1rem;
+		width: 13px;
+		height: 13px;
+		border-top: 2px solid #140084;
+		border-left: 2px solid #140084;
+		box-sizing: border-box;
+		transform: rotate(225deg);
+	}
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+.Img_Wrapped {
+	position: absolute;
+	display: inline-block;
+	left: 0;
+	width: 50%;
+	height: 100%;
+
+	.Img {
+		position: absolute;
+		left: 0;
+	}
+}
+
+.Text_Wrapped {
+	position: absolute;
+	display: inline-block;
+	right: 0;
+	width: 50%;
+	height: 100%;
+
+	.Box_Title {
+		display: inline-block;
+		font-size: 2.5rem;
+		font-family: 'Stylish', sans-serif;
+		margin-top: 1rem;
+		color: #4a4a4a;
+	}
+	.Box_Description {
+		display: inline-block;
+		margin-top: 2rem;
+		span {
+			font-size: 1.3em;
+			font-family: 'Gaegu', cursive;
+			display: block;
+			text-align: start;
+			line-height: 1.5rem;
+		}
+	}
+}
